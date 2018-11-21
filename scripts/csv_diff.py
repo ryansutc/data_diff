@@ -11,10 +11,10 @@ import argparse
 import csv
 import hashlib
 
-global columns
+global compare_cols
 
 def report_diff(x):
-    if x.name[1] in columns:
+    if x.name[1] in compare_cols:
         return x[0] if x[0] == x[1] else '{} --> {}'.format(*x)
     else:
         return x[1] if x.isnull()[0] else x[0]
@@ -29,6 +29,12 @@ def has_change(row):
         return "N"
 ###############
 
+def calc_hash(row):
+    vals = [str(val) for index, val in row.iteritems() if index in compare_cols]
+    return hashlib.sha1(", ".join(vals)).hexdigest()
+
+
+###############
 def create_comparison(df_1, df_2, name1= "Table A", name2 = "Table B"):
     ''''
     Merge two tables, matching records based on the
@@ -75,18 +81,18 @@ def create_comparison(df_1, df_2, name1= "Table A", name2 = "Table B"):
 
 def reorder_columns(input_df):
     """
-    reorder columns in input_df to match order in global "columns"
+    reorder compare_cols in input_df to match order in global "compare_cols"
     variable.
 
     :param input_df: input dataframe to be rearranged
     :return: input_df reordered
 
-    :remarks: uses global variable columns
+    :remarks: uses global variable compare_cols
     """
 
-    bastard_fields = list(set(input_df.columns.values).difference(columns))
+    bastard_fields = list(set(input_df.columns.values).difference(compare_cols))
 
-    newlist = list(columns)
+    newlist = list(compare_cols)
     newlist.extend(bastard_fields)
 
     return input_df[newlist]
@@ -160,15 +166,15 @@ if __name__ == '__main__':
         print msg
         raise IOError(msg)
 
-    global columns
+    global compare_cols
     if dirty:
-        columns = [col for col in df_a.columns.values if col in
+        compare_cols = [col for col in df_a.columns.values if col in
                    list(set(df_a.columns.values).intersection(set(df_b.columns.values)))]
         df_a = reorder_columns(df_a)
         df_b = reorder_columns(df_b)
     else:
         # Ensure that two tables have matching schema:
-        columns = df_a.columns.tolist()
+        compare_cols = df_a.columns.tolist()
         df_b = reorder_columns(df_b)
         if not df_a.dtypes.equals(df_b.dtypes):
             msg = "table A and B do not have matching schemas. Columns must be in same order."
@@ -189,24 +195,19 @@ if __name__ == '__main__':
         msg = "warning: removed %s duplicate rows" % orig_len_b - df_b.shape[1]
         print msg
 
-    # lets try to find EXACT matches first. Since this will allow
-    # us to at least join some of the duplicates.
+
     if dirty:
-        df_a["hash"] = hashlib.sha1(", ".join(columns)).hexdigest()
-        df_b["hash"] = hashlib.sha1(", ".join(columns)).hexdigest()
+        # lets try to find EXACT matches first. Since this will allow
+        # us to at least join some of the duplicates.
 
-        df_a.apply()
-        # get a set of all hashes from tableA and tableB and extract intersection
-        df_a["hash"] = df_a.app
-        df_a["hash"] = ""
-        df_b["hash"] = ""
-        for c in columns:
-            df_a["hash"] += ", %s" % df_a[c]
-            df_b["hash"] += ", %s" % df_b[c]
-        df_a["hash"] = hashlib.sha1(df_a["hash"]).hexdigest()
-        df_b["hash"] = hashlib.sha1(df_b["hash"]).hexdigest()
+        # create a hash ID from all combine_cols
+        df_a["hash"] = df_a.apply(calc_hash, axis=1)
+        df_b["hash"] = df_b.apply(calc_hash, axis=1)
 
+        # find hash values present in both tables (ie matching rows)
+        matches = df_a.loc[df_b["hash"].isin(df_a["hash"])]["hash"]
 
+        # extract it from the original tables
 
     # add index to dataframes, throw error if index fields not found:
     try:
@@ -215,8 +216,6 @@ if __name__ == '__main__':
     except KeyError as e:
         print "One or more index fields do not exist: %s" % e.message
         raise SystemExit(1)
-
-
 
     # Check for a non-unique primary key/indexes. If they exist we extract all
     # instances of the duplicates
@@ -259,8 +258,8 @@ if __name__ == '__main__':
         if df_a_hasdups and df_b_hasdups:
             # need to compare the duplicate records by adding ALL fields to index
             # because we know at least that way it will be unique:
-            df_a_dups.set_index(columns, inplace=True)
-            df_b_dups.set_index(columns, inplace=True)
+            df_a_dups.set_index(compare_cols, inplace=True)
+            df_b_dups.set_index(compare_cols, inplace=True)
 
             comparison_dups = create_comparison(df_a_dups, df_b_dups, tableAname, tableBname)
             comparison_dups.reset_index(inplace=True)
