@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e73d5de0-8ed3-4fb5-bf98-98f9fd353b31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="e73d5de0-8ed3-4fb5-bf98-98f9fd353b31" name="Default Changelist" comment="Updated Readme as per process diagram (pt 2)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +14,7 @@
     <session id="-1021588839">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -22,38 +22,44 @@
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Pipfile" value="4" />
-          <entry key="py" value="9" />
+          <entry key="md" value="2" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="9" />
+          <entry key="Markdown" value="2" />
+          <entry key="Python" value="14" />
           <entry key="TOML file" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Pipfile" value="3" />
-          <entry key="Python Console" value="4308" />
+          <entry key="Python Console" value="4623" />
           <entry key="dummy" value="37" />
-          <entry key="py" value="8813" />
-          <entry key="txt" value="23" />
+          <entry key="md" value="1223" />
+          <entry key="py" value="9439" />
+          <entry key="txt" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="60" />
-          <entry key="Python" value="13121" />
+          <entry key="Markdown" value="1223" />
+          <entry key="PLAIN_TEXT" value="158" />
+          <entry key="Python" value="14062" />
           <entry key="TOML file" value="3" />
         </counts>
       </usages-collector>
@@ -62,14 +68,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/csv_diff.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding>
-                <marker date="1539303849685" expanded="true" signature="698:2499" ph="..." />
-              </folding>
+            <state relative-caret-position="115">
+              <caret line="218" selection-start-line="218" selection-end-line="218" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="347">
+                <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/apply.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2358">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/frame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106614">
+              <caret line="6013" selection-start-line="6013" selection-end-line="6013" />
             </state>
           </provider>
         </entry>
@@ -93,6 +126,9 @@
       <find>quit()</find>
       <find>raise SystemExit</find>
       <find>column_list</find>
+      <find>compare</find>
+      <find>columns</find>
+      <find>apply</find>
     </findStrings>
     <replaceStrings>
       <replace>index_fields</replace>
@@ -105,6 +141,7 @@
       <replace>df_b_dups</replace>
       <replace>raise SystemExit</replace>
       <replace>raise SystemExit(1)</replace>
+      <replace>compare_cols</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -117,14 +154,15 @@
         <option value="$PROJECT_DIR$/scripts/testmatches.py" />
         <option value="$PROJECT_DIR$/scripts/compileSampleResults.py" />
         <option value="$PROJECT_DIR$/scripts/csv_diff.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="799" />
-    <option name="y" value="12" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="788" />
-    <option name="height" value="1150" />
+    <option name="height" value="740" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -266,7 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538743372384</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed hash calculation. (working checkin)">
+      <created>1542767055620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542767055620</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated Readme as per process diagram">
+      <created>1545435788821</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545435788821</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -281,19 +333,19 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.102878466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2165059" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37834942" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32809773" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32111692" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40837696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290461" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3279743" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32635254" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -305,30 +357,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added formatted tables." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added formatted tables." />
+    <MESSAGE value="Fixed hash calculation. (working checkin)" />
+    <MESSAGE value="Updated Readme as per process diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme as per process diagram" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>273</line>
+          <line>272</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>264</line>
+          <line>263</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>200</line>
-          <option name="timeStamp" value="35" />
+          <line>203</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>206</line>
-          <option name="timeStamp" value="36" />
+          <line>212</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
+          <line>207</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -369,20 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/apply.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5586">
-          <caret line="276" selection-start-line="276" selection-end-line="276" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63315">
-          <caret line="3105" selection-start-line="3105" selection-end-line="3105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/panel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21483">
@@ -392,11 +437,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/csv_diff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <marker date="1539303849685" expanded="true" signature="698:2499" ph="..." />
-          </folding>
+        <state relative-caret-position="115">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/apply.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2358">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106614">
+          <caret line="6013" selection-start-line="6013" selection-end-line="6013" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="347">
+            <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
