@@ -26,8 +26,8 @@ the ```ID``` and ```CODE``` fields as composite keys:
 to compare we run the script like this:
 
 ```
-csv_diff.py 'c:/data/table_a.csv' 'c:/data/table_b.csv' 
-   'c:/data/diff_table.csv' 'idfield1' 'idfield2' --namea 'tableA'
+csv_diff.py 'c:/data/tableA.csv' 'c:/data/tableB.csv' 
+   --output 'c:/data/diff_table.csv' 'ID' 'CODE' --namea 'tableA'
    --nameb 'tableB'
 ```
 
@@ -41,7 +41,7 @@ csv_diff.py 'c:/data/table_a.csv' 'c:/data/table_b.csv'
 
 *The first record was an exact match, the second had some changes, and
 the third could only be found in table A.*
-### Example B:
+### Example 2:
 
 A simple example of comparing **"dirty"** data, where the index fields are not quite unique:
 
@@ -59,15 +59,14 @@ A simple example of comparing **"dirty"** data, where the index fields are not q
 | ID | CODE | NAME | GROUP | VAL | 
 |---:|-----:|:-----:|:---:|:----:| 
 | 1 | A | FOO | HIGH| 5 | 
-| 2 | A | CHO | LOW | 2 |
 | 3 | B | SAL | MED | 8 |
 
 
 to compare we run the script like this (note ```--dirty```):
 
 ```
-csv_diff.py 'c:/data/table_a.csv' 'c:/data/table_b.csv' 
-   'c:/data/diff_table.csv' 'idfield1' 'idfield2' --namea 'results'
+csv_diff.py 'c:/data/tableAdirty.csv' 'c:/data/tableBdirty.csv' 
+   --output 'c:/data/diff_table.csv' 'idfield1' 'idfield2' --namea 'results'
    --nameb 'solution' --dirty
 ```
 

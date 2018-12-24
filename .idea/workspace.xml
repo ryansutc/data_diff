@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e73d5de0-8ed3-4fb5-bf98-98f9fd353b31" name="Default Changelist" comment="Updated Readme as per process diagram (pt 2)">
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csv_diff.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/result.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/result1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tableA.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tableA.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tableAdirty.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tableAdirty.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tableB.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tableB.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tableBdirty.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tableBdirty.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/csv_diff.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/testmatches.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +26,7 @@
     <session id="-1021588839">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -26,40 +38,44 @@
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.92" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Pipfile" value="4" />
-          <entry key="md" value="2" />
-          <entry key="py" value="14" />
+          <entry key="Pipfile" value="5" />
+          <entry key="csv" value="4" />
+          <entry key="md" value="6" />
+          <entry key="py" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="2" />
-          <entry key="Python" value="14" />
-          <entry key="TOML file" value="4" />
+          <entry key="Markdown" value="6" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="26" />
+          <entry key="TOML file" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Pipfile" value="3" />
-          <entry key="Python Console" value="4623" />
+          <entry key="Python Console" value="5248" />
           <entry key="dummy" value="37" />
-          <entry key="md" value="1223" />
-          <entry key="py" value="9439" />
+          <entry key="md" value="1275" />
+          <entry key="py" value="12829" />
           <entry key="txt" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1223" />
+          <entry key="Markdown" value="1275" />
           <entry key="PLAIN_TEXT" value="158" />
-          <entry key="Python" value="14062" />
+          <entry key="Python" value="18077" />
           <entry key="TOML file" value="3" />
         </counts>
       </usages-collector>
@@ -68,41 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/csv_diff.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="218" selection-start-line="218" selection-end-line="218" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="347">
-                <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/apply.py">
+        <entry file="file://$PROJECT_DIR$/csv_diff.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2358">
-              <caret line="141" selection-start-line="141" selection-end-line="141" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/frame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106614">
-              <caret line="6013" selection-start-line="6013" selection-end-line="6013" />
+            <state relative-caret-position="302">
+              <caret line="301" lean-forward="true" selection-start-line="301" selection-end-line="301" />
             </state>
           </provider>
         </entry>
@@ -129,6 +115,10 @@
       <find>compare</find>
       <find>columns</find>
       <find>apply</find>
+      <find>fix_order_columns</find>
+      <find>has_change</find>
+      <find>tableAname</find>
+      <find>global</find>
     </findStrings>
     <replaceStrings>
       <replace>index_fields</replace>
@@ -142,6 +132,7 @@
       <replace>raise SystemExit</replace>
       <replace>raise SystemExit(1)</replace>
       <replace>compare_cols</replace>
+      <replace>__calc_hash</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -153,8 +144,14 @@
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/scripts/testmatches.py" />
         <option value="$PROJECT_DIR$/scripts/compileSampleResults.py" />
-        <option value="$PROJECT_DIR$/scripts/csv_diff.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/data/test.py" />
+        <option value="$PROJECT_DIR$/scripts/test.py" />
+        <option value="$PROJECT_DIR$/scripts/__init__.py" />
+        <option value="$PROJECT_DIR$/scripts/csv_diff.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/csv_diff.py" />
       </list>
     </option>
   </component>
@@ -176,11 +173,6 @@
               <item name="data_diff" type="b2602c69:ProjectViewProjectNode" />
               <item name="data_diff" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="data_diff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data_diff" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -190,11 +182,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\RSutcliffe\Desktop\github\data_diff" />
       <recent name="C:\Users\RSutcliffe\Desktop\github\data_diff\scripts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RSutcliffe\Desktop\github\data_diff" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -209,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.csv_diff">
+  <component name="RunManager" selected="Python.csv_diff (1)">
     <configuration name="compileSampleResults" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="data_diff" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -222,7 +218,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\RSutcliffe\Desktop\github\data_diff\scripts\csv_diff.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\RSutcliffe\Desktop\github\data_diff\csv_diff.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="csv_diff (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="data_diff" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/csv_diff.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -243,8 +260,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/csv_diff.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="C:\Users\RSutcliffe\Desktop\github\data_diff\csv_diff.py" />
+      <option name="PARAMETERS" value="'c:/data/tableAdirty.csv' 'c:/data/tableBdirty.csv' -o 'c:/data/diff_table.csv' 'ID' 'CODE' --namea 'tableA' --nameb 'tableB'" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -252,7 +269,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testmatches" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="data_diff" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -264,7 +281,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/testmatches.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\RSutcliffe\Desktop\github\data_diff\test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="data_diff" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -274,15 +312,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.testmatches" />
       <item itemvalue="Python.compileSampleResults" />
       <item itemvalue="Python.csv_diff" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.csv_diff (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.csv_diff (1)" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.csv_diff" />
         <item itemvalue="Python.compileSampleResults" />
-        <item itemvalue="Python.testmatches" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545435788821</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated Readme as per process diagram (pt 2)">
+      <created>1545436934924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545436934924</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -332,24 +381,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.102878466" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10501066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32809773" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32111692" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40837696" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32047158" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37299034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290461" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32635254" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32583067" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="-64" y="492" width="1898" height="206" id="Terminal" order="3" weight="0.35607675" />
+      <window_info anchor="right" x="-64" y="492" width="1898" height="206" id="Terminal" order="3" visible="true" weight="0.35607675" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -359,35 +409,16 @@
     <MESSAGE value="Added formatted tables." />
     <MESSAGE value="Fixed hash calculation. (working checkin)" />
     <MESSAGE value="Updated Readme as per process diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme as per process diagram" />
+    <MESSAGE value="Updated Readme as per process diagram (pt 2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Readme as per process diagram (pt 2)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>272</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>263</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>203</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>212</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/scripts/csv_diff.py</url>
-          <line>207</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/csv_diff.py</url>
+          <line>255</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -414,55 +445,77 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/testmatches.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+    <entry file="file://$PROJECT_DIR$/data/test.py" />
+    <entry file="file://$PROJECT_DIR$/scripts/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="459">
+            <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/panel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21483">
-          <caret line="1053" selection-start-line="1053" selection-end-line="1053" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/csv_diff.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
+        <state relative-caret-position="168">
+          <caret line="1083" selection-start-line="1083" selection-end-line="1083" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/apply.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2358">
+        <state relative-caret-position="550">
           <caret line="141" selection-start-line="141" selection-end-line="141" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/data_diff-NsoUZv00/Lib/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106614">
+        <state relative-caret-position="550">
           <caret line="6013" selection-start-line="6013" selection-end-line="6013" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="347">
-            <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/scripts/testmatches.py" />
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tableBdirty.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tableAdirty.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tableB.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tableA.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv_diff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="301" lean-forward="true" selection-start-line="301" selection-end-line="301" />
         </state>
       </provider>
     </entry>

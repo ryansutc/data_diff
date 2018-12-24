@@ -1,8 +1,0 @@
-ID,CODE,NAME,GROUP,VAL,version,has_change
-1,A,FOO,HIGH,5,tableB,N/A
-1,A,FOO,HIGH,5,Table A,N/A
-1,A,DUP,MED,4,Table A,N/A
-2,A,BAR,MED --> HIGH,13 --> 15,tableA > tableB,Y
-3,B,SALSA,MED,2,tableA,N/A
-3,B,SALSA,MED,8,Table B,N/A
-3,B,RODIN,LOW,10,Table B,N/A
