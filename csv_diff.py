@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-import warnings
-warnings.filterwarnings("ignore", message="numpy.dtype size changed")
-warnings.filterwarnings("ignore", message="numpy.ufunc size changed")
-warnings.simplefilter(action='ignore', category=FutureWarning)
+from warnings import filterwarnings, simplefilter
+filterwarnings("ignore", message="numpy.dtype size changed")
+filterwarnings("ignore", message="numpy.ufunc size changed")
+simplefilter(action='ignore', category=FutureWarning)
 
-import os
+from os import path
 import pandas as pd
 import argparse
 import hashlib
@@ -18,7 +18,7 @@ def __report_diff(x):
         return x[1] if x.isnull()[0] else x[0]
 ################
 
-def __has_change(row):
+def __has_change(row, tableAname, tableBname):
     # print type(row)
     # print row
     if "<>" in row.to_string():
@@ -69,7 +69,7 @@ def create_comparison(df_1, df_2, name1, name2):
         diff_output = diff_panel.apply(__report_diff, axis=0)
 
         #update compare field:
-        diff_output["compare"] = diff_output.apply(__has_change, axis=1)
+        diff_output["compare"] = diff_output.apply(__has_change, axis=1, args=(name1, name2))
         # strip duplicates from big table so that only unique orphans left:
         full_set = full_set.loc[~full_set.index.isin(dup_indexes)]
 
@@ -80,7 +80,7 @@ def create_comparison(df_1, df_2, name1, name2):
 
     return comparison
 
-def reorder_columns(input_df):
+def __reorder_columns(input_df):
     """
     reorder compare_cols in input_df to match order in global "compare_cols"
     variable.
@@ -99,7 +99,7 @@ def reorder_columns(input_df):
 
 ##################
 
-def fix_order_columns(comparison_tblcols):
+def __fix_order_columns(comparison_tblcols):
     """
 
     :return: reordered list of column names for comparison_tbl
@@ -114,6 +114,9 @@ def fix_order_columns(comparison_tblcols):
 
 def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Table B", output=None, dirty=False):
     """
+    Function that takes two tables and compares them based on some index fields and returns the result
+    as a pandas dataframe object as well as optionally outputing a difference/comparison table in csv
+    form
 
     :param tbl_a: first input table (.csv)
     :param tbl_b: second input table (.csv)
@@ -128,7 +131,7 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
     # Make sure files exist
     try:
         if output:
-            if not os.path.exists(os.path.split(output)[0]):
+            if not path.exists(path.split(output)[0]):
                 msg = "output is not a valid directory: " + output
                 raise OSError(msg)
 
@@ -166,8 +169,8 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
     global compare_cols
     compare_cols = [col for col in df_a.columns.values if col in
                list(set(df_a.columns.values).intersection(set(df_b.columns.values)))]
-    df_a = reorder_columns(df_a)
-    df_b = reorder_columns(df_b)
+    df_a = __reorder_columns(df_a)
+    df_b = __reorder_columns(df_b)
 
     if not df_a.dtypes.equals(df_b.dtypes):
         msg = "table A and B do not have exactly matching fields. Only comparing common fields.."
@@ -202,7 +205,6 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
     df_b = df_b[~df_b.index.isin(matches)]
 
     # run comparison
-    print tableAname
     comparison_tbl = create_comparison(df_a_matches, df_b_matches, tableAname, tableBname)
     del df_a_matches, df_b_matches
     comparison_tbl.reset_index(inplace=True)
@@ -216,7 +218,7 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
     # Check for a non-unique primary key/indexes. If they exist we extract all
     # instances of them. These are the CNCs or Uncomparables.
     if dirty:
-        # strip uncomparibles (dup ids within table) to new dataframes:
+        # strip uncomparables (dup ids within table) to new dataframes:
         df_a_dups = df_a[df_a.index.duplicated(keep=False)]
         df_a = df_a[~df_a.index.duplicated(keep=False)]
         df_b_dups = df_b[df_b.index.duplicated(keep=False)]
@@ -246,7 +248,7 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
     comparison_tbl = comparison_tbl.append(create_comparison(df_a, df_b, tableAname, tableBname))
     comparison_tbl.drop(["hash", "index"], inplace=True, axis=1)
     comparison_tbl.reset_index(inplace=True)
-    comparison_tbl = comparison_tbl[fix_order_columns(comparison_tbl.columns)]
+    comparison_tbl = comparison_tbl[__fix_order_columns(comparison_tbl.columns)]
     comparison_tbl.sort_values(by=index_fields, inplace=True)
 
     if output:
@@ -287,14 +289,15 @@ def main():
     tbl_b = args.tableb.replace("'","").replace('"','')
     output = str(args.output).replace("'","").replace('"','')
     index_fields = ['{0}'.format(s).replace("'","") for s in args.index]  # list of fields
+
     if args.namea:
         tableAname = args.namea.replace("'","'").replace('"','')
     else:
-        tableAname = "tblA " + os.path.split(tbl_a)[1]
+        tableAname = "tblA " + path.split(tbl_a)[1]
     if args.nameb:
         tableBname = args.nameb.replace("'","'").replace('"','')
     else:
-        tableBname = "tblB " + os.path.split(tbl_b)[1]
+        tableBname = "tblB " + path.split(tbl_b)[1]
     if args.dirty:
         dirty = True
     else:
