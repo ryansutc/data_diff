@@ -6,8 +6,11 @@ name = "pypi"
 [packages]
 pandas = "*"
 xarray = "*"
+pip = "==18.0"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "2.7"
+#https://github.com/pypa/pipenv/issues/1263

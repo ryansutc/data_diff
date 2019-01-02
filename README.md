@@ -92,3 +92,6 @@ appended at the end after the ```Compare``` field.
 
 To see details of the process, see [process diagram here](https://www.lucidchart.com/documents/view/a5c3bef5-3ff1-44ba-af41-04e9d7c63ce3/0).
 
+~
+Note to self..
+To build: ```pyinstaller csv_diff.py -F --onedir```

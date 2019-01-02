@@ -19,8 +19,7 @@ def __report_diff(x):
 ################
 
 def __has_change(row, tableAname, tableBname):
-    # print type(row)
-    # print row
+
     if "<>" in row.to_string():
         return "%s <> %s" % (tableAname, tableBname)
     else:
@@ -140,7 +139,7 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
         df_b = pd.read_csv(tbl_b) #, index_col=index_fields)
     except IOError as e:
         msg = "Error loading data: " + e.message
-        print msg
+        print(msg)
         raise IOError(msg)
 
     # add index to dataframes, throw error if index field(s) not found:
@@ -148,16 +147,16 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
         df_a.set_index(keys=index_fields, inplace=True)
         df_b.set_index(keys=index_fields, inplace=True)
     except KeyError as e:
-        print "One or more index fields do not exist: %s" % e.message
+        print("One or more index fields do not exist: %s") % e.message
         raise SystemExit(1)
 
     # Make sure Indexes are unique (if not dirty)
     if not dirty:
         if df_a.index.has_duplicates:
-            print "Error: table A does not have a unique index. quitting..."
+            print("Error: table A does not have a unique index. quitting...")
             raise SystemExit(1)
         if df_b.index.has_duplicates:
-            print "Error: table B does not have a unique index. quitting..."
+            print("Error: table B does not have a unique index. quitting...")
             raise SystemExit(1)
 
     # indexes good, lets drop them for now..
@@ -174,7 +173,7 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
 
     if not df_a.dtypes.equals(df_b.dtypes):
         msg = "table A and B do not have exactly matching fields. Only comparing common fields.."
-        print msg
+        print(msg)
 
     df_a.reset_index(inplace=True)
     df_b.reset_index(inplace=True)
@@ -255,7 +254,7 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
         comparison_tbl.to_csv(output)
     else:
         print(comparison_tbl)
-    print "done."
+    print("done.")
     return comparison_tbl
 
 ###################################
