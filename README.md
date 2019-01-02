@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/ryansutc/data_diff/master/doc/blob/data_diff.png" alt="doc-diff" width="20%" height="20%">
+<img src="https://raw.githubusercontent.com/ryansutc/data_diff/master/doc/blob/data_diff.png" alt="data-diff" width="20%">
     <br>
         data-diff
     <br>
@@ -14,7 +14,8 @@
 </p>
 
 ## Summary
-Using Pandas package to compare two tables with simular schema but different data.
+Using Pandas package to compare two tables with simular schema but different data. **VERY DRAFT**. Works only with csv files
+at present.
 
 ### Example 1:
 
