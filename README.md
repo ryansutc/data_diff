@@ -1,5 +1,19 @@
-## Data Diff: Compare csv files with Python
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/ryansutc/data_diff/master/doc/blob/data_diff.png" alt="doc-diff" width="20%" height="20%">
+    <br>
+        data-diff
+    <br>
+  <h4 align="center">Data Diff: Compare files with Python</h4>
+</h1>
 
+<p align="center">
+  <a href="https://github.com/ryansutc/data_diff/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/express.svg?maxAge=2592000&style=flat-square"
+         alt="License">
+  </a>
+</p>
+
+## Summary
 Using Pandas package to compare two tables with simular schema but different data.
 
 ### Example 1:
