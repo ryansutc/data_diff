@@ -1,0 +1,6 @@
+ID,CODE,NAME,GROUP,VAL,compare
+1,A,FOO,HIGH,5,tableA == tableB
+1,A,FOO,MED,13,tableA--> ???
+3,B,SAL,MED,2,tableA--> [CNC]
+3,B,SAL,LOW,10,tableA--> [CNC]
+3,B,SAL,MED,8,tableB--> [CNC]

@@ -1,0 +1,4 @@
+ID,CODE,NAME,GROUP,VAL,compare
+2,A,BAR,MED <> HIGH,13 <> 15,tableA <> tableB
+3,B,SALSA,MED,2,tableA--> ???
+1,A,FOO,HIGH,5,tableA == tableB
