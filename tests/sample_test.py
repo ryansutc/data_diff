@@ -1,11 +1,11 @@
 from data_diff import csv_diff
 import pandas as pd
-
+import os
 
 def test_sample():
     # Compare tool result output to expected answer for simple data:
-    df_output = csv_diff.data_diff("./data/tableA.csv",
-                                   "./data/tableB.csv",
+    df_output = csv_diff.data_diff(__get_file_path("./data/tableA.csv"),
+                                   __get_file_path("./data/tableB.csv"),
                                    ["ID", "CODE"],
                                    "tableA",
                                    "tableB")
@@ -20,8 +20,8 @@ def test_sample():
 
 def test_sample_dirty():
     # Compare tool result output to expected answer for dirty data:
-    df_output = csv_diff.data_diff("./data/tableAdirty.csv",
-                                   "./data/tableBdirty.csv",
+    df_output = csv_diff.data_diff(__get_file_path("./data/tableAdirty.csv"),
+                                   __get_file_path("./data/tableBdirty.csv"),
                                    ["ID", "CODE"],
                                    "tableA",
                                    "tableB",
@@ -33,3 +33,15 @@ def test_sample_dirty():
     for fld in answer.columns.values:
         if map(str, list(df_output[fld].values)) != map(str, list(answer[fld].values)):
             raise ValueError("Mismatch in values in " + fld)
+
+def __get_file_path(relpath):
+    '''
+    workaround so that TravisCI can discover the files
+    :param relpath: path to file relative to this file
+    :return: full path to file
+    '''
+
+    root_folder = os.path.join(os.path.dirname(__file__))
+    full_file_path = os.path.join(root_folder, relpath)
+    print(full_file_path)
+    return full_file_path
