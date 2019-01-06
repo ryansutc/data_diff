@@ -6,5 +6,5 @@ install:
 # command to run tests (switch to pipenv instead of requirements.txt)
     - 'pip install pipenv'
     - 'pipenv install --dev'
-    - 'pipenv shell'
+#    - 'pipenv shell'
 script: pytest
