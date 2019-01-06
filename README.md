@@ -110,7 +110,8 @@ To see details of the process, see [process diagram here](https://www.lucidchart
 
 ## Use It:
 
-pip install
+```pip install git+https://github.com/ryansutc/data_diff@master#egg=data_diff```
+
 ~
 Note to self..
 To build: ```pyinstaller csv_diff.py -F --onedir```
