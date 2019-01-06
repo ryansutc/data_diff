@@ -114,4 +114,15 @@ To see details of the process, see [process diagram here](https://www.lucidchart
 
 ~
 Note to self..
-To build: ```pyinstaller csv_diff.py -F --onedir```
+
+To **build as exe**: 
+
+```pyinstaller csv_diff.py -F --onedir```
+
+To **setup dev env**: 
+* Make sure you have latest pipenv. ```pip install --upgrade pipenv```
+* cd to root data_diff folder and build virtual env with packages specified in pipfile. ```pipenv install --dev```
+* make sure IDE is using your virtual env for its interpretor. In PyCharm, open settings
+ (```ctl+alt+s```), under "Project" select "Project Interpretor". Select virtual env & save as default for workspace.
+* activate virtual environment in terminal via ```pipenv shell```
+* Always install additional packages w. ```pipenv install [package]``` or ```pipenv install [package] --dev```.  

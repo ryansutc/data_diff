@@ -1,8 +1,8 @@
 from data_diff import csv_diff
 import pandas as pd
 
-if __name__ == '__main__':
 
+def test_sample():
     # Compare tool result output to expected answer for simple data:
     df_output = csv_diff.data_diff("./data/tableA.csv",
                                    "./data/tableB.csv",
@@ -17,6 +17,8 @@ if __name__ == '__main__':
     pd.testing.assert_frame_equal(df_output, answer, check_index_type=False, check_dtype=False, check_like=True,
                                   check_names=False)
 
+
+def test_sample_dirty():
     # Compare tool result output to expected answer for dirty data:
     df_output = csv_diff.data_diff("./data/tableAdirty.csv",
                                    "./data/tableBdirty.csv",
@@ -29,5 +31,5 @@ if __name__ == '__main__':
     print(answer)
 
     for fld in answer.columns.values:
-        if map(str, list(df_output[fld].values)) != map(str,list(answer[fld].values)):
+        if map(str, list(df_output[fld].values)) != map(str, list(answer[fld].values)):
             raise ValueError("Mismatch in values in " + fld)
