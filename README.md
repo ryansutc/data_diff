@@ -7,6 +7,10 @@
 </h1>
 
 <p align="center">
+  <a href="https://travis-ci.org/ryansutc/data_diff">
+    <img src="https://travis-ci.org/ryansutc/data_diff.svg?branch=master"
+         alt="License">
+  </a>
   <a href="https://github.com/ryansutc/data_diff/blob/master/LICENSE">
     <img src="https://img.shields.io/npm/l/express.svg?maxAge=2592000&style=flat-square"
          alt="License">
