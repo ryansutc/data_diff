@@ -1,0 +1,9 @@
+language: python
+python:
+    - "2.7"
+# command to install dependencies
+install:
+# command to run tests (switch to pipenv instead of requirements.txt)
+    - 'pip install pipenv'
+    - 'pipenv install'
+script: ./tests/test.py

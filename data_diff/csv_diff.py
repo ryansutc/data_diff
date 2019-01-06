@@ -9,7 +9,8 @@ import pandas as pd
 import argparse
 import hashlib
 
-global compare_cols
+global compare_cols  # columns being compares b/w tables
+global index_fields_dict  # index field(s) for each table
 
 def __report_diff(x):
     if x.name[1] in compare_cols:
@@ -79,6 +80,26 @@ def create_comparison(df_1, df_2, name1, name2):
 
     return comparison
 
+def __revert_dtypes(df, dirty=False):
+    """
+    a workaround to make sure index field values retain orig dtype
+
+    :param df: input dataframe to reformat
+    :return: same df reformatted
+    """
+    if len(index_fields_dict) == 0:
+        # If the global variable index_fields_dict is empty something was programmed wrong. -rs
+        raise AssertionError("Error: Could not find index fields.")
+    for fld in index_fields_dict:
+        if fld in df.columns:
+            df[fld] = df[fld].astype(index_fields_dict[fld])
+    for fld in compare_cols:
+        if fld in df.columns and fld not in index_fields_dict and dirty==False:
+            df[fld] = df[fld].apply(str)
+    return df
+
+##################
+
 def __reorder_columns(input_df):
     """
     reorder compare_cols in input_df to match order in global "compare_cols"
@@ -109,7 +130,52 @@ def __fix_order_columns(comparison_tblcols):
 
     cols += list(bastard_fields)
     return cols
-########
+
+##################
+
+def index_validator(df_a, df_b, index_fields, unique=True):
+    """
+    Checks that index fields exist in both tables,
+    have same data types and (optionally) are unique
+    :param df_a: dataframe table a
+    :param df_b: dataframe table b
+    :param unique: boolean, check if is unique? default=True
+    :param index_fields: list of index_fields for two tables
+    :return: dictionary of index_field names with their dtype as vals (dtypes are themselves dict objects)
+
+    """
+    # add index to dataframes, throw error if index field(s) not found:
+    try:
+        df_a.set_index(keys=index_fields, inplace=True)
+        df_b.set_index(keys=index_fields, inplace=True)
+    except KeyError as e:
+        print("One or more index fields do not exist: %s") % e.message
+        raise SystemExit(1)
+
+    # indexes good, lets drop them for now..
+    df_a.reset_index(inplace=True)
+    df_b.reset_index(inplace=True)
+
+    # Make sure Indexes are unique (if not dirty)
+    if unique:
+        if df_a.index.has_duplicates:
+            print("Error: table A does not have a unique index. quitting...")
+            raise SystemExit(1)
+        if df_b.index.has_duplicates:
+            print("Error: table B does not have a unique index. quitting...")
+            raise SystemExit(1)
+
+    # Make sure index_fields are same datatype b/w tables:
+    index_fields_dict = {}
+    for fld in index_fields:
+        if df_a[fld].dtype != df_b[fld].dtype:
+            raise AssertionError("Error: Index datatypes do not match between tables.")
+        else:
+           index_fields_dict[fld] = df_a[fld].dtype
+
+    return index_fields_dict
+
+##################
 
 def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Table B", output=None, dirty=False):
     """
@@ -142,26 +208,9 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
         print(msg)
         raise IOError(msg)
 
-    # add index to dataframes, throw error if index field(s) not found:
-    try:
-        df_a.set_index(keys=index_fields, inplace=True)
-        df_b.set_index(keys=index_fields, inplace=True)
-    except KeyError as e:
-        print("One or more index fields do not exist: %s") % e.message
-        raise SystemExit(1)
-
-    # Make sure Indexes are unique (if not dirty)
-    if not dirty:
-        if df_a.index.has_duplicates:
-            print("Error: table A does not have a unique index. quitting...")
-            raise SystemExit(1)
-        if df_b.index.has_duplicates:
-            print("Error: table B does not have a unique index. quitting...")
-            raise SystemExit(1)
-
-    # indexes good, lets drop them for now..
-    df_a.reset_index(inplace=True)
-    df_b.reset_index(inplace=True)
+    unique = not dirty
+    global index_fields_dict
+    index_fields_dict = index_validator(df_a=df_a, df_b=df_b, index_fields=index_fields, unique=unique)
 
     print("processing...")
     # Determine what columns each input table has in common ("comparable fields"):
@@ -248,6 +297,7 @@ def data_diff(tbl_a, tbl_b, index_fields, tableAname="Table A", tableBname="Tabl
     comparison_tbl.drop(["hash", "index"], inplace=True, axis=1)
     comparison_tbl.reset_index(inplace=True)
     comparison_tbl = comparison_tbl[__fix_order_columns(comparison_tbl.columns)]
+    comparison_tbl = __revert_dtypes(comparison_tbl, dirty)
     comparison_tbl.sort_values(by=index_fields, inplace=True)
 
     if output:

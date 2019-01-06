@@ -38,10 +38,10 @@ the ```ID``` and ```CODE``` fields as composite keys:
 | 1  | A    | FOO   | HIGH| 5 | 
 | 2| A| BAR | HIGH | 15 |
 
-to compare we run the script like this:
+to compare we run the utility like this:
 
 ```
-csv_diff.py 'c:/data/tableA.csv' 'c:/data/tableB.csv' 
+csv_diff 'c:/data/tableA.csv' 'c:/data/tableB.csv' 
    --output 'c:/data/diff_table.csv' 'ID' 'CODE' --namea 'tableA'
    --nameb 'tableB'
 ```
@@ -77,12 +77,12 @@ A simple example of comparing **"dirty"** data, where the index fields are not q
 | 3 | B | SAL | MED | 8 |
 
 
-to compare we run the script like this (note ```--dirty```):
+to compare we run the utility like this (note ```--dirty```):
 
 ```
-csv_diff.py 'c:/data/tableAdirty.csv' 'c:/data/tableBdirty.csv' 
-   --output 'c:/data/diff_table.csv' 'idfield1' 'idfield2' --namea 'results'
-   --nameb 'solution' --dirty
+csv_diff 'c:/data/tableAdirty.csv' 'c:/data/tableBdirty.csv' 
+   --output 'c:/data/diff_table_dirty.csv' 'ID' 'CODE' --namea 'tableA'
+   --nameb 'tableB' --dirty
 ```
 
 **Results in the Data Diff Comparison:**
@@ -107,6 +107,10 @@ appended at the end after the ```Compare``` field.
 
 To see details of the process, see [process diagram here](https://www.lucidchart.com/documents/view/a5c3bef5-3ff1-44ba-af41-04e9d7c63ce3/0).
 
+
+## Use It:
+
+pip install
 ~
 Note to self..
 To build: ```pyinstaller csv_diff.py -F --onedir```
