@@ -11,7 +11,7 @@ def test_sample():
                                    "tableB")
 
     df_output.set_index(keys=["ID","CODE"], inplace=True)
-    answer = pd.read_csv("./data/diff_table.csv")
+    answer = pd.read_csv(__get_file_path("./data/diff_table.csv"))
     answer.set_index(keys=["ID", "CODE"], inplace=True)
     print(answer)
     pd.testing.assert_frame_equal(df_output, answer, check_index_type=False, check_dtype=False, check_like=True,
@@ -27,7 +27,7 @@ def test_sample_dirty():
                                    "tableB",
                                    dirty=True)
     df_output.reset_index(drop=True,inplace=True)
-    answer = pd.read_csv("./data/diff_table_dirty.csv")
+    answer = pd.read_csv(__get_file_path("./data/diff_table_dirty.csv"))
     print(answer)
 
     for fld in answer.columns.values:
