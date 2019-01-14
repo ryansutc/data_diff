@@ -6,5 +6,19 @@ install:
 # command to run tests (switch to pipenv instead of requirements.txt)
     - 'pip install pipenv'
     - 'pipenv install --dev'
-#    - 'pipenv shell'
+    - 'pip install --upgrade setuptools' # workaround to get pyinstaller to run
+    - 'pyinstaller data_diff/csv_diff.py --onedir'
+    - 'python zipdist.py'
+
 script: pytest
+
+deploy:
+  provider: releases
+  api_key: $github_secret_personal_access_token
+  file: 'data_diff_linux.zip'
+  # travis doesn't support windows for python so will need to compile/copy that manually for now
+  skip_cleanup: true
+  overwrite: true
+  on:
+    tags: true # only deploy on tagged build
+    #repo: ryansutc/table_describer
