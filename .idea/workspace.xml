@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e73d5de0-8ed3-4fb5-bf98-98f9fd353b31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/data_diff.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_diff.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e73d5de0-8ed3-4fb5-bf98-98f9fd353b31" name="Default Changelist" comment="Added Travis CI logo.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sample_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +75,10 @@
     <session id="391852531">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.116" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.24" value="1" />
@@ -91,50 +88,50 @@
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Pipfile" value="4" />
           <entry key="gitignore" value="2" />
-          <entry key="in" value="1" />
-          <entry key="md" value="5" />
-          <entry key="py" value="10" />
+          <entry key="in" value="2" />
+          <entry key="md" value="6" />
+          <entry key="py" value="13" />
           <entry key="spec" value="1" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="5" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="10" />
+          <entry key="Markdown" value="6" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="13" />
           <entry key="TOML file" value="4" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Pipfile" value="26" />
+          <entry key="Pipfile" value="43" />
           <entry key="Python Console" value="2180" />
           <entry key="dummy" value="21" />
           <entry key="gitignore" value="17" />
           <entry key="in" value="49" />
-          <entry key="md" value="1145" />
-          <entry key="py" value="4140" />
+          <entry key="md" value="1148" />
+          <entry key="py" value="4830" />
           <entry key="spec" value="192" />
-          <entry key="txt" value="438" />
-          <entry key="yml" value="102" />
+          <entry key="txt" value="692" />
+          <entry key="yml" value="294" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1145" />
-          <entry key="PLAIN_TEXT" value="717" />
-          <entry key="Python" value="6320" />
-          <entry key="TOML file" value="26" />
-          <entry key="YAML" value="102" />
+          <entry key="Markdown" value="1148" />
+          <entry key="PLAIN_TEXT" value="971" />
+          <entry key="Python" value="7010" />
+          <entry key="TOML file" value="43" />
+          <entry key="YAML" value="294" />
         </counts>
       </usages-collector>
     </session>
@@ -144,26 +141,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_diff/csv_diff.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="309" column="35" selection-start-line="309" selection-start-column="35" selection-end-line="309" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="507">
+              <caret line="290" column="76" selection-start-line="290" selection-start-column="76" selection-end-line="290" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pipfile">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pipfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -171,10 +177,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/sample_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="234">
+              <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
+                <marker date="1546808930684" expanded="true" signature="1601:1606" ph="..." />
               </folding>
             </state>
           </provider>
@@ -252,16 +259,17 @@
         <option value="$PROJECT_DIR$/csv_diff.spec" />
         <option value="$PROJECT_DIR$/csv_diff.py" />
         <option value="$PROJECT_DIR$/MANIFEST.in" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/data_diff/csv_diff.py" />
         <option value="$PROJECT_DIR$/tests/__init__.py" />
         <option value="$PROJECT_DIR$/tests/test.py" />
-        <option value="$PROJECT_DIR$/Pipfile" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tests/test_tmp.py" />
         <option value="$PROJECT_DIR$/tests/sample_test.py" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/zipdist.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/Pipfile" />
       </list>
     </option>
   </component>
@@ -276,7 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,23 +296,15 @@
               <item name="data_diff" type="462c0819:PsiDirectoryNode" />
               <item name="data_diff" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="data_diff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="data_diff" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="data_diff" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/knife" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -317,15 +316,16 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RSutcliffe\OneDrive\github\data_diff" />
+      <recent name="C:\Users\RSutcliffe\OneDrive\github\data_diff\tests" />
+      <recent name="C:\Users\RSutcliffe\OneDrive\github\data_diff\data_diff" />
+      <recent name="C:\Users\RSutcliffe\Desktop\github\data_diff" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\RSutcliffe\OneDrive\github\data_diff" />
       <recent name="C:\Users\RSutcliffe\Desktop\github\data_diff" />
       <recent name="C:\Users\RSutcliffe\Desktop\github\data_diff\scripts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\RSutcliffe\OneDrive\github\data_diff\tests" />
-      <recent name="C:\Users\RSutcliffe\OneDrive\github\data_diff\data_diff" />
-      <recent name="C:\Users\RSutcliffe\Desktop\github\data_diff" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -565,7 +565,56 @@
       <option name="project" value="LOCAL" />
       <updated>1546797962327</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update tests and travisci build to try to get tests to work (attempt 1)">
+      <created>1546805219729</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1546805219729</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update tests and travisci build to try to get tests to work (attempt 2)">
+      <created>1546806943316</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1546806943316</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added answer files for sample data (diff_table, diff_table_dirty)">
+      <created>1546807420261</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1546807420261</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added answer files for sample data (diff_table, diff_table_dirty)">
+      <created>1546808559935</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1546808559935</updated>
+    </task>
+    <task id="LOCAL-00018" summary="changed pathing to test input and answer files for TravisCI.">
+      <created>1546808962049</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1546808962049</updated>
+    </task>
+    <task id="LOCAL-00019" summary="changed pathing to test input files.">
+      <created>1546809525323</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1546809525323</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added Travis CI logo.">
+      <created>1547438270754</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1547438270754</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -579,9 +628,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21801706" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15351813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -598,7 +646,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="-64" y="492" width="1898" height="206" id="Terminal" order="3" visible="true" weight="0.4728145" />
+      <window_info active="true" anchor="right" x="-64" y="492" width="1898" height="206" id="Terminal" order="3" visible="true" weight="0.26439232" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -617,7 +665,13 @@
     <MESSAGE value="fixed image errors and added DRAFT" />
     <MESSAGE value="added some tools to maintain datatypes of input fields, esp. index fields and added travisci testing" />
     <MESSAGE value="minor fix to readme w. build info" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor fix to readme w. build info" />
+    <MESSAGE value="update tests and travisci build to try to get tests to work (attempt 1)" />
+    <MESSAGE value="update tests and travisci build to try to get tests to work (attempt 2)" />
+    <MESSAGE value="added answer files for sample data (diff_table, diff_table_dirty)" />
+    <MESSAGE value="changed pathing to test input and answer files for TravisCI." />
+    <MESSAGE value="changed pathing to test input files." />
+    <MESSAGE value="Added Travis CI logo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Travis CI logo." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -679,13 +733,6 @@
     <entry file="file://$PROJECT_DIR$/environment.yml" />
     <entry file="file://$PROJECT_DIR$/csv_diff.spec" />
     <entry file="file://$PROJECT_DIR$/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_diff/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -696,13 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Miniconda2/Lib/site-packages/pandas/util/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
@@ -710,54 +750,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_diff/csv_diff.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="309" column="35" selection-start-line="309" selection-start-column="35" selection-end-line="309" selection-end-column="35" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_tmp.py" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="725">
-            <caret line="125" column="116" selection-start-line="125" selection-start-column="116" selection-end-line="125" selection-end-column="116" />
+          <first_editor relative-caret-position="144">
+            <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_tmp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/sample_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="234">
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+            <marker date="1546808930684" expanded="true" signature="1601:1606" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zipdist.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_diff/csv_diff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="290" column="76" selection-start-line="290" selection-start-column="76" selection-end-line="290" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>

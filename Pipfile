@@ -10,6 +10,7 @@ pip = "==18.0"
 
 [dev-packages]
 pytest = "*"
+pyinstaller = "*"
 
 [requires]
 python_version = "2.7"
